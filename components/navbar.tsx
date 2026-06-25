@@ -41,7 +41,7 @@ export default function Navbar() {
     }`}
   >
     <Image
-      src="/images/MY image.jpeg"
+      src="/images/profile.png"
       alt="Puskar Shaw"
       width={44}
       height={44}

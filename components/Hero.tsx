@@ -148,7 +148,7 @@ export default function Hero() {
               }`}
           >
             <Image
-              src="/images/MY image.png"
+              src="/images/profile.png"
               alt="Puskar Shaw"
               width={260}
               height={260}
