@@ -232,10 +232,10 @@ export default function Footer() {
         {/* BIG ANIMATED FOOTER TEXT */}
         <div
           ref={logoRef}
-          className="overflow-hidden border-b border-black/10 py-8 dark:border-white/10 sm:py-10"
+          className="overflow-hidden border-b border-black/10 py-6 dark:border-white/10 sm:py-10"
         >
           <motion.div
-            className="flex justify-center gap-[0.02em] text-center text-[13vw] font-bold uppercase leading-none tracking-[-0.1em] sm:text-[12vw]"
+            className="flex justify-center text-center text-[8.5vw] font-bold uppercase leading-none tracking-[-0.08em] xs:text-[10vw] sm:text-[11vw] lg:text-[12vw]"
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
@@ -248,7 +248,7 @@ export default function Footer() {
                   isLight
                     ? "from-black via-black/70 to-black/10"
                     : "from-white via-white/60 to-white/5"
-                } ${letter === " " ? "w-[0.25em]" : ""}`}
+                } ${letter === " " ? "w-[0.2em]" : ""}`}
               >
                 {letter}
               </motion.span>

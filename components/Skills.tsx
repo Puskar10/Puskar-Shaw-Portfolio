@@ -73,24 +73,24 @@ export default function Skills() {
             Frameworks I Used
           </p>
 
-          <h2 className="text-balance text-4xl font-semibold leading-[1.1] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+          <h2 className="text-balance text-3xl font-semibold leading-[1.1] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
             Tech Stack Behind <br className="hidden sm:block" />
             My Modern Web Projects
           </h2>
 
           <p
-            className={`mx-auto mt-6 max-w-xl text-pretty text-base leading-8 sm:text-lg lg:mx-0 ${textSoft}`}
+            className={`mx-auto mt-4 max-w-xl text-pretty text-sm leading-7 sm:mt-6 sm:text-lg sm:leading-8 lg:mx-0 ${textSoft}`}
           >
             I use React, Next.js, TypeScript, Tailwind CSS, Node.js, Express,
             MongoDB, and JavaScript to build responsive, smooth, and
             professional full-stack web applications.
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+          <div className="mt-6 flex flex-wrap justify-center gap-2.5 sm:mt-8 sm:gap-3 lg:justify-start">
             {techStack.map((item) => (
               <span
                 key={item}
-                className={`rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-xl transition ${chipClass}`}
+                className={`rounded-full border px-3.5 py-1.5 text-xs font-medium backdrop-blur-xl transition sm:px-4 sm:py-2 sm:text-sm ${chipClass}`}
               >
                 {item}
               </span>
@@ -101,11 +101,11 @@ export default function Skills() {
         {/* RIGHT ANIMATED CARD */}
         <div
           ref={containerRef}
-          className={`relative mx-auto flex min-h-[340px] w-full max-w-[360px] items-center justify-center overflow-hidden rounded-[1.75rem] border p-4 shadow-2xl backdrop-blur-2xl sm:min-h-[430px] sm:max-w-[520px] sm:p-8 lg:max-w-[580px] ${cardBg}`}
+          className={`relative mx-auto flex min-h-[300px] w-full max-w-[310px] items-center justify-center overflow-hidden rounded-[1.75rem] border p-3 shadow-2xl backdrop-blur-2xl xs:max-w-[360px] xs:p-4 sm:min-h-[430px] sm:max-w-[520px] sm:p-8 lg:max-w-[580px] ${cardBg}`}
         >
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/20 blur-[100px]" />
 
-          <div className="relative z-10 flex h-full w-full flex-col justify-between gap-8 sm:gap-12">
+          <div className="relative z-10 flex h-full w-full flex-col justify-between gap-6 sm:gap-12">
             {/* TOP ROW */}
             <div className="flex items-center justify-between">
               <TechCircle ref={reactRef} isLight={isLight}>
@@ -125,7 +125,7 @@ export default function Skills() {
 
               <Circle
                 ref={centerRef}
-                className={`h-20 w-20 border p-4 shadow-xl sm:h-24 sm:w-24 ${
+                className={`h-16 w-16 border p-3 shadow-xl xs:h-20 xs:w-20 xs:p-4 sm:h-24 sm:w-24 ${
                   isLight
                     ? "border-black/10 bg-black text-white shadow-black/20"
                     : "border-white/15 bg-white text-black shadow-indigo-500/20"
@@ -151,13 +151,13 @@ export default function Skills() {
             </div>
 
             {/* EXTRA MOBILE-FRIENDLY ROW */}
-            <div className="flex items-center justify-center gap-8 sm:hidden">
+            <div className="flex items-center justify-center gap-6 sm:hidden sm:gap-8">
               <TechCircle ref={jsRef} isLight={isLight}>
                 <SiJavascript className="text-[#F7DF1E]" />
               </TechCircle>
 
               <div
-                className={`grid h-12 w-12 place-items-center rounded-full border text-xl ${
+                className={`grid h-10 w-10 place-items-center rounded-full border text-lg xs:h-12 xs:w-12 xs:text-xl ${
                   isLight
                     ? "border-black/10 bg-white text-black"
                     : "border-white/10 bg-white/10 text-white"
@@ -248,7 +248,7 @@ const TechCircle = React.forwardRef<
   return (
     <Circle
       ref={ref}
-      className={`h-12 w-12 border p-3 text-2xl shadow-lg transition hover:scale-110 sm:h-16 sm:w-16 sm:text-3xl ${
+      className={`h-10 w-10 border p-2 text-xl shadow-lg transition hover:scale-110 xs:h-12 xs:w-12 xs:p-3 xs:text-2xl sm:h-16 sm:w-16 sm:text-3xl ${
         isLight
           ? "border-black/10 bg-white text-black shadow-black/10"
           : "border-white/10 bg-white/10 text-white shadow-black/30"

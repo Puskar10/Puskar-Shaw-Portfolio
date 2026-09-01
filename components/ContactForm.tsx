@@ -125,7 +125,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className={`relative w-full overflow-hidden px-4 py-24 transition-colors duration-500 sm:px-6 sm:py-28 lg:px-8 lg:py-32 ${sectionBg}`}
+      className={`relative w-full overflow-hidden px-4 py-16 transition-colors duration-500 sm:px-6 sm:py-24 lg:px-8 lg:py-32 ${sectionBg}`}
     >
       <GridBackground isLight={isLight} />
 
@@ -133,22 +133,22 @@ export default function ContactForm() {
       <div className="pointer-events-none absolute bottom-10 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-[130px]" />
       <div className="pointer-events-none absolute bottom-20 left-0 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-[130px]" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
         {/* LEFT SIDE */}
         <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
           <p
-            className={`mb-5 text-xs font-semibold uppercase tracking-[0.35em] sm:text-sm ${textMuted}`}
+            className={`mb-4 text-xs font-semibold uppercase tracking-[0.35em] sm:mb-5 sm:text-sm ${textMuted}`}
           >
             Contact Me
           </p>
 
-          <h2 className="text-balance text-4xl font-semibold leading-[1.1] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+          <h2 className="text-balance text-3xl font-semibold leading-[1.1] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
             Let&apos;s Create Something <br className="hidden sm:block" />
             Clean, Modern & Useful
           </h2>
 
           <p
-            className={`mx-auto mt-6 max-w-xl text-pretty text-base leading-8 sm:text-lg lg:mx-0 ${textSoft}`}
+            className={`mx-auto mt-4 max-w-xl text-pretty text-sm leading-7 sm:mt-6 sm:text-lg sm:leading-8 lg:mx-0 ${textSoft}`}
           >
             Have a project idea, collaboration, freelance work, or portfolio
             feedback? Send me a message and I&apos;ll get back to you soon.
@@ -156,9 +156,9 @@ export default function ContactForm() {
 
           {/* IMAGE CARD */}
           <div
-            className={`mt-8 overflow-hidden rounded-[2rem] border p-2 shadow-2xl backdrop-blur-2xl ${imageCardClass}`}
+            className={`mt-6 overflow-hidden rounded-[2rem] border p-2 shadow-2xl backdrop-blur-2xl sm:mt-8 ${imageCardClass}`}
           >
-            <div className="relative h-[80vh] min-h-[520px] max-h-[760px] overflow-hidden rounded-[1.5rem]">
+            <div className="relative h-[240px] xs:h-[300px] sm:h-[380px] lg:h-[80vh] min-h-0 lg:min-h-[520px] max-h-[760px] overflow-hidden rounded-[1.5rem]">
               <Image
                 src="/contact/contact-support.jpg"
                 alt="Contact support workspace"
@@ -175,11 +175,11 @@ export default function ContactForm() {
                   }`}
               />
 
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/70">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+                <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/70 sm:text-sm">
                   Available For Work
                 </p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">
+                <h3 className="mt-1 text-xl font-semibold text-white sm:mt-2 sm:text-2xl">
                   Let&apos;s discuss your project
                 </h3>
               </div>
@@ -187,7 +187,7 @@ export default function ContactForm() {
           </div>
 
           {/* INFO BOXES */}
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:max-w-xl">
+          <div className="mt-6 grid gap-3.5 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:max-w-xl">
             <InfoBox
               isLight={isLight}
               icon={<Mail className="h-5 w-5" />}
@@ -218,7 +218,7 @@ export default function ContactForm() {
           </div>
 
           {/* SOCIAL BUTTONS */}
-          <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+          <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-8 lg:justify-start">
             <a
               href="https://github.com/Puskar10"
               target="_blank"
@@ -251,7 +251,7 @@ export default function ContactForm() {
         <Card
           className={`mx-auto w-full max-w-xl rounded-[2rem] border shadow-2xl backdrop-blur-2xl ${cardClass}`}
         >
-          <CardHeader className="space-y-3 bg-transparent p-6 sm:p-8">
+          <CardHeader className="space-y-3 bg-transparent p-5 sm:p-8">
             <div
               className={`mb-2 grid h-12 w-12 place-items-center rounded-2xl ${isLight ? "bg-black text-white" : "bg-white text-black"
                 }`}

@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className={`relative min-h-screen overflow-hidden px-4 pt-32 pb-32 transition-colors duration-500 sm:pb-44 lg:pb-52 ${isLight ? "bg-[#f8fafc] text-slate-950" : "bg-[#020617] text-white"
+      className={`relative min-h-[100dvh] overflow-hidden px-4 pt-28 pb-20 transition-colors duration-500 sm:pt-32 sm:pb-36 lg:pb-48 ${isLight ? "bg-[#f8fafc] text-slate-950" : "bg-[#020617] text-white"
         }`}
     >
       {/* Brighter Premium Background */}
@@ -132,8 +132,7 @@ export default function Hero() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl flex-col items-center">
-        {/* Avatar */}
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl flex-col items-center justify-center">
         {/* Avatar */}
         <motion.div
           initial={{ opacity: 0, y: -20, scale: 0.9 }}
@@ -142,7 +141,7 @@ export default function Hero() {
           className="relative"
         >
           <div
-            className={`relative grid h-44 w-44 place-items-center overflow-hidden rounded-full border p-1 shadow-2xl backdrop-blur-xl sm:h-52 sm:w-52 lg:h-60 lg:w-60 ${isLight
+            className={`relative grid h-36 w-36 place-items-center overflow-hidden rounded-full border p-1 shadow-2xl backdrop-blur-xl sm:h-48 sm:w-48 lg:h-60 lg:w-60 ${isLight
                 ? "border-slate-300/80 bg-white/70 shadow-blue-300/30"
                 : "border-white/15 bg-white/10 shadow-cyan-500/20"
               }`}
@@ -168,10 +167,10 @@ export default function Hero() {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
-          className="mt-12 text-center"
+          className="mt-8 text-center sm:mt-12"
         >
           <h1
-            className={`mx-auto max-w-4xl text-4xl font-black leading-[1.08] tracking-[-0.045em] sm:text-5xl lg:text-6xl xl:text-7xl ${isLight
+            className={`mx-auto max-w-4xl text-3xl font-black leading-[1.1] tracking-[-0.045em] sm:text-5xl lg:text-6xl xl:text-7xl ${isLight
                 ? "text-slate-950 drop-shadow-sm"
                 : "text-white drop-shadow-[0_0_28px_rgba(255,255,255,0.22)]"
               }`}
@@ -185,18 +184,18 @@ export default function Hero() {
 
           {/* Typewriter */}
           <div
-            className={`mx-auto mt-7 flex h-10 items-center justify-center text-lg font-semibold sm:text-xl lg:text-2xl ${isLight ? "text-slate-700" : "text-white/90"
+            className={`mx-auto mt-5 flex min-h-10 items-center justify-center text-base font-semibold sm:mt-7 sm:text-xl lg:text-2xl ${isLight ? "text-slate-700" : "text-white/90"
               }`}
           >
             <span>I&apos;m a&nbsp;</span>
 
             <span
-              className={`inline-flex min-w-[230px] items-center justify-start text-left sm:min-w-[300px] ${isLight ? "text-blue-700" : "text-cyan-100"
+              className={`inline-flex min-w-[170px] items-center justify-start text-left sm:min-w-[300px] ${isLight ? "text-blue-700" : "text-cyan-100"
                 }`}
             >
               <span className="truncate">{typedText}</span>
               <span
-                className={`ml-1 h-6 w-[2px] animate-pulse rounded-full ${isLight ? "bg-blue-700" : "bg-cyan-100"
+                className={`ml-1 h-5 w-[2px] animate-pulse rounded-full sm:h-6 ${isLight ? "bg-blue-700" : "bg-cyan-100"
                   }`}
               />
             </span>
@@ -208,7 +207,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className={`mx-auto mt-10 max-w-3xl text-center text-sm leading-7 sm:text-base ${isLight ? "text-slate-700" : "text-white/75"
+          className={`mx-auto mt-6 max-w-3xl text-center text-xs leading-6 sm:mt-10 sm:text-base sm:leading-7 ${isLight ? "text-slate-700" : "text-white/75"
             }`}
         >
           I&apos;m a full-stack developer with a love for clean design, smooth
@@ -222,12 +221,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.55 }}
-          className="mt-8 flex flex-col items-center gap-4 sm:flex-row"
+          className="mt-7 flex w-full flex-col items-center justify-center gap-3.5 sm:w-auto sm:flex-row sm:gap-4"
         >
           <button
             type="button"
             onClick={() => handleNavClick("projects")}
-            className={`group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-xl transition duration-300 ${isLight
+            className={`group inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-xl transition duration-300 sm:w-auto ${isLight
                 ? "bg-slate-950 text-white shadow-blue-300/40 hover:bg-slate-800"
                 : "bg-white text-black shadow-cyan-300/20 hover:bg-white/90"
               }`}
@@ -239,7 +238,7 @@ export default function Hero() {
           <a
             href="/resume/Puskar-Shaw-Resume.pdf"
             download
-            className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-lg backdrop-blur-xl transition duration-300 ${isLight
+            className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-lg backdrop-blur-xl transition duration-300 sm:w-auto ${isLight
                 ? "bg-white/90 text-slate-950 shadow-blue-200/70 ring-1 ring-slate-200 hover:bg-white"
                 : "bg-white/10 text-white shadow-black/20 ring-1 ring-white/10 hover:bg-white/15"
               }`}

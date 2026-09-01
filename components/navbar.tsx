@@ -77,7 +77,7 @@ export default function Navbar() {
               key={item}
               type="button"
               onClick={() => handleNavClick(item)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-300 ${isLight
+              className={`rounded-full px-3 py-1.5 text-xs font-medium transition duration-300 lg:px-4 lg:py-2 lg:text-sm ${isLight
                   ? "text-slate-700 hover:bg-black/10 hover:text-slate-950"
                   : "text-white/75 hover:bg-white/10 hover:text-white"
                 }`}
@@ -88,27 +88,27 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop Right Buttons */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-2 md:flex lg:gap-3">
           <button
             type="button"
             onClick={toggleTheme}
-            className={`flex h-10 w-10 items-center justify-center rounded-full border backdrop-blur-xl transition duration-300 ${isLight
+            className={`flex h-9 w-9 items-center justify-center rounded-full border backdrop-blur-xl transition duration-300 lg:h-10 lg:w-10 ${isLight
                 ? "border-black/10 bg-white/45 text-slate-950 hover:bg-white/70"
                 : "border-white/10 bg-white/10 text-white hover:bg-white/15"
               }`}
             aria-label="Toggle theme"
           >
             {isLight ? (
-              <FaMoon className="h-4 w-4" />
+              <FaMoon className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
             ) : (
-              <FaSun className="h-4 w-4" />
+              <FaSun className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
             )}
           </button>
 
           <button
             type="button"
             onClick={() => handleNavClick("contact")}
-            className={`rounded-full border px-5 py-2.5 text-sm font-semibold backdrop-blur-xl transition duration-300 ${isLight
+            className={`rounded-full border px-4 py-2 text-xs font-semibold backdrop-blur-xl transition duration-300 lg:px-5 lg:py-2.5 lg:text-sm ${isLight
                 ? "border-black/10 bg-white/45 text-slate-950 hover:bg-white/70"
                 : "border-white/10 bg-white/10 text-white hover:bg-white/15"
               }`}
@@ -122,7 +122,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className={`flex h-10 w-10 items-center justify-center rounded-xl border backdrop-blur-xl transition duration-300 ${isLight
+            className={`flex h-9 w-9 items-center justify-center rounded-xl border backdrop-blur-xl transition duration-300 sm:h-10 sm:w-10 ${isLight
                 ? "border-black/10 bg-white/45 text-slate-950 hover:bg-white/70"
                 : "border-white/10 bg-white/10 text-white hover:bg-white/15"
               }`}
@@ -138,7 +138,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setExpanded((prev) => !prev)}
-            className={`flex h-10 w-10 items-center justify-center rounded-xl border backdrop-blur-xl transition duration-300 ${isLight
+            className={`flex h-9 w-9 items-center justify-center rounded-xl border backdrop-blur-xl transition duration-300 sm:h-10 sm:w-10 ${isLight
                 ? "border-black/10 bg-white/45 text-slate-950 hover:bg-white/70"
                 : "border-white/10 bg-white/10 text-white hover:bg-white/15"
               }`}
@@ -156,9 +156,9 @@ export default function Navbar() {
       {/* Mobile Nav */}
       {expanded && (
         <div
-          className={`mt-3 rounded-2xl border p-2 shadow-2xl backdrop-blur-2xl transition-all duration-300 md:hidden ${isLight
-              ? "border-black/10 bg-white/55 shadow-black/5"
-              : "border-white/10 bg-white/[0.07] shadow-black/30"
+          className={`mt-2 rounded-2xl border p-2 shadow-2xl backdrop-blur-2xl transition-all duration-300 md:hidden ${isLight
+              ? "border-black/10 bg-white/90 shadow-black/10"
+              : "border-white/10 bg-slate-950/90 shadow-black/50"
             }`}
         >
           {navItems.map((item) => (
@@ -166,9 +166,9 @@ export default function Navbar() {
               key={item}
               type="button"
               onClick={() => handleNavClick(item)}
-              className={`block w-full rounded-xl px-4 py-3 text-left text-sm font-medium transition duration-300 ${isLight
+              className={`block w-full rounded-xl px-4 py-2.5 text-left text-sm font-medium transition duration-300 ${isLight
                   ? "text-slate-700 hover:bg-black/10 hover:text-slate-950"
-                  : "text-white/70 hover:bg-white/10 hover:text-white"
+                  : "text-white/80 hover:bg-white/10 hover:text-white"
                 }`}
             >
               {item}
@@ -178,9 +178,9 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => handleNavClick("contact")}
-            className={`mt-1 w-full rounded-xl border px-4 py-3 text-sm font-semibold transition duration-300 ${isLight
-                ? "border-black/10 bg-white/45 text-slate-950 hover:bg-white/70"
-                : "border-white/10 bg-white/10 text-white hover:bg-white/15"
+            className={`mt-1 w-full rounded-xl border px-4 py-2.5 text-sm font-semibold transition duration-300 ${isLight
+                ? "border-black/10 bg-black text-white hover:bg-black/85"
+                : "border-white/10 bg-white text-black hover:bg-white/90"
               }`}
           >
             Hire Me
